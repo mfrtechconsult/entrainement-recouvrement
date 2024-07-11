@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_recouvrement_dossier,access_recouvrement_dossier,model_recouvrement_dossier,,1,1,1,1
+access_recouvrement_action,access_recouvrement_action,model_recouvrement_action,,1,1,1,1
+access_recouvrement_facture,access_recouvrement_facture,model_recouvrement_facture,,1,1,1,1
+access_recouvrement_paiement,access_recouvrement_paiement,model_recouvrement_paiement,,1,1,1,1

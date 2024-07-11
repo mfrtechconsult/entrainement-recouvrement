@@ -1,0 +1,34 @@
+<odoo>
+    <data noupdate="1">
+        <record id="activity_type_courier_initial" model="mail.activity.type">
+            <field name="name">Courier initial au débiteur</field>
+            <field name="category">default</field>
+            <field name="icon">fa-envelope</field>
+        </record>
+        <record id="activity_type_relancer_debiteur" model="mail.activity.type">
+            <field name="name">Relancer le débiteur</field>
+            <field name="category">default</field>
+            <field name="icon">fa-redo-alt</field>
+        </record>
+        <record id="activity_type_appeler_debiteur" model="mail.activity.type">
+            <field name="name">Appeler le débiteur</field>
+            <field name="category">default</field>
+            <field name="icon">fa-phone</field>
+        </record>
+        <record id="activity_type_mise_demeure" model="mail.activity.type">
+            <field name="name">Proposition de mise en demeure</field>
+            <field name="category">default</field>
+            <field name="icon">fa-gavel</field>
+        </record>
+        <record id="activity_type_injonction" model="mail.activity.type">
+            <field name="name">Proposition d'injonction</field>
+            <field name="category">default</field>
+            <field name="icon">fa-balance-scale</field>
+        </record>
+        <record id="activity_type_autre" model="mail.activity.type">
+            <field name="name">Autre</field>
+            <field name="category">default</field>
+            <field name="icon">fa-ellipsis-h</field>
+        </record>
+    </data>
+</odoo>

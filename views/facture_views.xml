@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+        <record id="view_facture_form" model="ir.ui.view">
+            <field name="name">recouvrement.facture.form</field>
+            <field name="model">recouvrement.facture</field>
+            <field name="arch" type="xml">
+                <form string="Facture de recouvrement">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="dossier_id"/>
+                            <field name="montant"/>
+                            <field name="date_facture"/>
+                            <field name="date_echeance"/>
+                            <field name="fichier" filename="ficher_name" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_facture_tree" model="ir.ui.view">
+            <field name="name">recouvrement.facture.tree</field>
+            <field name="model">recouvrement.facture</field>
+            <field name="arch" type="xml">
+                <tree string="Factures de recouvrement">
+                    <field name="name"/>
+                    <field name="dossier_id"/>
+                    <field name="montant"/>
+                    <field name="date_facture"/>
+                    <field name="date_echeance"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_recouvrement_facture" model="ir.actions.act_window">
+            <field name="name">Factures</field>
+            <field name="res_model">recouvrement.facture</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_recouvrement_facture" name="Factures" parent="recouvrement_menu" action="action_recouvrement_facture" sequence="20"/>
+    </data>
+</odoo>

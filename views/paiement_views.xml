@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+        <record id="view_paiement_form" model="ir.ui.view">
+            <field name="name">recouvrement.paiement.form</field>
+            <field name="model">recouvrement.paiement</field>
+            <field name="arch" type="xml">
+                <form string="Paiement de recouvrement">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="dossier_id"/>
+                            <field name="montant"/>
+                            <field name="date_paiement"/>
+                            <field name="moyen_paiement"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_paiement_tree" model="ir.ui.view">
+            <field name="name">recouvrement.paiement.tree</field>
+            <field name="model">recouvrement.paiement</field>
+            <field name="arch" type="xml">
+                <tree string="Paiements de recouvrement">
+                    <field name="name"/>
+                    <field name="dossier_id"/>
+                    <field name="montant"/>
+                    <field name="date_paiement"/>
+                    <field name="moyen_paiement"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_recouvrement_paiement" model="ir.actions.act_window">
+            <field name="name">Paiements</field>
+            <field name="res_model">recouvrement.paiement</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_recouvrement_paiement" name="Paiements" parent="recouvrement_menu" action="action_recouvrement_paiement" sequence="30"/>
+    </data>
+</odoo>

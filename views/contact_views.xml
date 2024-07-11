@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+        <record id="view_partner_form_recouvrement" model="ir.ui.view">
+            <field name="name">res.partner.form.recouvrement</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Dossiers de recouvrement">
+                        <field name="dossier_ids">
+                            <tree string="Dossiers de recouvrement">
+                                <field name="name"/>
+                                <field name="crediteur_id"/>
+                                <field name="debiteur_id"/>
+                                <field name="montant"/>
+                                <field name="montant_recouvre"/>
+                                <field name="status"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+    </data>
+</odoo>
